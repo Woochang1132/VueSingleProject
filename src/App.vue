@@ -1,4 +1,5 @@
 <template>
+  <AppHeader></AppHeader>
   <div>
     {{message}}
   </div>
@@ -7,18 +8,25 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        message: 'hi'
-      }
-    },
-    methods:{
-      showAlert(){
-        alert('hello')
-      }
+  import AppHeader from './components/AppHeader.vue'
+
+export default {
+  components: {
+    // '컴포넌트 이름' : 컴포넌트 내용
+    //'AppHeader' : AppHeader
+    AppHeader
+  },  
+  data() {
+    return {
+      message: '앱 헤더 컴포넌트'
+    }
+  },
+  methods:{
+    showAlert(){
+      alert('hello')
     }
   }
+}
 </script>
 
 <style scoped>
