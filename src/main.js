@@ -1,6 +1,8 @@
 // 뷰 라이브러리를 들고옴
-import { createApp } from 'vue'
+import { createApp } from 'vue';
 // 뷰 파일을 들고옴
-import App from './App.vue'
+import App from './App.vue';
+import router from './routes/index.js';
 
-createApp(App).mount('#app')
+//router 개념을 사용하겠다. 
+createApp(App).use(router).mount('#app')
